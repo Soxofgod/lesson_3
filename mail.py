@@ -7,8 +7,10 @@ load_dotenv()
 LOGIN = os.getenv('LOGIN')
 TOKEN = os.getenv('TOKEN')
 
-name_to = 'Иван'
-my_name = 'Егор'
+sender_email = 'devmanorg@yandex.ru'
+sender_name = 'Иван'
+recipient_email = 'melnichenkoegorka@yandex.ru'
+recipient_name = 'Егор'
 website = 'https://dvmn.org/profession-ref-program/egormeln/Z3DSm/'
 letter = """
 From: {0}
@@ -31,7 +33,7 @@ Content-Type: text/plain; charset="UTF-8";
 Все проекты — они же решение наших задачек — можно разместить на твоём GitHub. Работодатели такое оценят. 
 
 Регистрируйся → {4}  
-На курсы, которые еще не вышли, можно подписаться и получить уведомление о релизе сразу на имейл.""".format('devmanorg@yandex.ru','melnichenkoegorka@yandex.ru', name_to, my_name, website)
+На курсы, которые еще не вышли, можно подписаться и получить уведомление о релизе сразу на имейл.""".format(sender_email, recipient_email, recipient_name, sender_name, website)
 print(letter)
 letter = letter.encode('UTF-8')
 server = smtplib.SMTP_SSL('smtp.yandex.ru', 465)
