@@ -34,7 +34,6 @@ Content-Type: text/plain; charset="UTF-8";
 
 Регистрируйся → {4}  
 На курсы, которые еще не вышли, можно подписаться и получить уведомление о релизе сразу на имейл.""".format(sender_email, recipient_email, recipient_name, sender_name, website)
-print(letter)
 letter = letter.encode('UTF-8')
 server = smtplib.SMTP_SSL('smtp.yandex.ru', 465)
 server.login(LOGIN,TOKEN)
