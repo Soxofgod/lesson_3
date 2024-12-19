@@ -12,8 +12,7 @@ sender_name = 'Иван'
 recipient_email = 'melnichenkoegorka@yandex.ru'
 recipient_name = 'Егор'
 website = 'https://dvmn.org/profession-ref-program/egormeln/Z3DSm/'
-letter = """
-From: {0}
+letter = """From: {0}
 To: {1}
 Subject: Приглашение!
 Content-Type: text/plain; charset="UTF-8";
